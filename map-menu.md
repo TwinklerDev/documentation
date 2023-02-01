@@ -5,11 +5,11 @@ The Map Menus are panels on the left side of the screen that display when the ma
 
 The ID of the selected object is shown at the bottom of the menu, along with an option to copy the ID to the clipboard. The ID can be useful when working with an external spreadsheet (imported/exported) or when reporting an issue, such as through the feedback form.
 
-<div style="text-align:center"><img src="/_media/map_menu.png" /></div>
+<div style="text-align:center"><img src="_media/map_menu.png" /></div>
 
 # Project
 
-<div style="text-align:center"><img src="/_media/project_menu.png" /></div>
+<div style="text-align:center"><img src="_media/project_menu.png" /></div>
 
 At the bottom of the panel, in addition to the ID, the owner of the project is displayed and the access level of the current user.
 
@@ -27,7 +27,7 @@ The **Export** button in *Excel Configuration File* returns an Excel file contai
 
 The **Import** button in *Excel Configuration File* brings up a dialog box to import site and coverage data into the project.
 
-<div style="text-align:center"><img src="/_media/import_config.png" /></div>
+<div style="text-align:center"><img src="_media/import_config.png" /></div>
 
 The steps to import configuration data are:
 
@@ -38,13 +38,13 @@ The steps to import configuration data are:
 * Press Yes to start the changes
 * Progress is displayed. If the importation will take some time (eg. many coverages to predict) the **Run** button will continue the task as a [background job](main-menu?id=background-jobs).   
 
-<div style="text-align:center"><img src="/_media/import_config2.png" /></div>
+<div style="text-align:center"><img src="_media/import_config2.png" /></div>
 
 ### Export Coverage
 
 The **Export** button in *Coverage File* returns a zip file, containing the project coverage in one of several  standard vector file formats. The coverage can then be analysed and processed outside of Twinkler using additional tools eg. [QGIS](https://qgis.org/), ArcGIS or MapInfo Professional.
 
-<div style="text-align:center"><img src="/_media/cov_export.png" /></div>
+<div style="text-align:center"><img src="_media/cov_export.png" /></div>
 
 There are a number of options to select:
 
@@ -60,7 +60,7 @@ Progress is displayed once the save process commences. If the export will take s
 
 There are three more options for KMZ file format, due to the fact that KMZ files also contain information about how to present the coverage data eg. in Google Earth.
 
-<div style="text-align:center"><img src="/_media/kmz_options.png" /></div>
+<div style="text-align:center"><img src="_media/kmz_options.png" /></div>
 
 * **Opacity** Move the slider to control the opacity of the layer.
 * **Color Scheme** Select the color scheme used to represent signal strength.
@@ -95,7 +95,7 @@ The first steps to import a vector file are:
 * **Upload** the file to the server for analysis. This returns "Vector file details".
 * **Spatial Reference System** In the event that a [Spatial Reference System](https://en.wikipedia.org/wiki/Spatial_reference_system) is not defined in the vector file, it has to be manually entered. The format is a number, defined by [EPSG](https://en.wikipedia.org/wiki/EPSG_Geodetic_Parameter_Dataset), which is an organisation with a [website](https://epsg.org/home.html) that maintains SRS defintions. Vector file details may be used as search terms on the website, to identify the correct EPSG number.
 
-<div style="text-align:center"><img src="/_media/veclayer_import1.png" /></div>
+<div style="text-align:center"><img src="_media/veclayer_import1.png" /></div>
 
 After the vector file has been analyzed the results are displayed, along with the **layer name** and four optional selections to make. The default layer name is the filename but can be changed to whatever is more suitable. 
 
@@ -103,7 +103,7 @@ Twinkler will store up to two text fields and two numerical fields from the vect
 
 The **Confirm** button initiates the importation of the layer into Twinkler. Once it has completed the layer will selected and displayed. The default presentation style (red filled polygons, with blacks borders and labels) can be adjusted to whatever is more suitable.
 
-<div style="text-align:center"><img src="/_media/veclayer_import2.png" /></div>
+<div style="text-align:center"><img src="_media/veclayer_import2.png" /></div>
 
 #### Map Server Raster Tiles
 
@@ -116,7 +116,7 @@ To display a layer from a Web Map Tile Service ([WMTS](https://en.wikipedia.org/
     * boundary box - {west}, {south}, {east}, {north}
 * **Coordinate Type** describes how tile boundaries are defined in the URL.  
 
-<div style="text-align:center"><img src="/_media/rastlayer_import.png" /></div>
+<div style="text-align:center"><img src="_media/rastlayer_import.png" /></div>
 
 ### Layer Management
 
@@ -155,14 +155,14 @@ There are several options to adjust the style of the underlying base map.
 
 * **Sites to Display** Control which sites to display on the map. If "Tagged Sites" is selected then a box will become active in which tags can be selected, as well the the logic of combining the tags. If 'or' is selected then a site has to have at least one of the required tags present, with 'and' the site has to have all of the required tags.
 
-<div style="text-align:center"><img src="/_media/tagged_sites.png" /></div>
+<div style="text-align:center"><img src="_media/tagged_sites.png" /></div>
 
 * **Site Clustering** "Clustering" is when nearby sites are represented by a single icon, which has a number showing the number of sites that it represents. Clustering is normally seen when the map is zoomed out, this is the default behaviour. Clicking a cluster will zoom in to reveal sites or smaller clusters. It is possible to temporarily stop clustering however the application may slow down if too many sites are being displayed. A warning will be displayed if this is likely to occur. The options to stop clustering are:
     * *Off* - no clustering until the session ends or projects changes
     * *Off until zoom out* - no clustering until the map is zoomed out
     * *Off for on-screen sites* - no clustering for the sites that are currently displayed on the screen
 
-<div style="text-align:center"><img src="/_media/cluster_pre.png" />&nbsp;&nbsp;<img src="/_media/cluster_post.png" /></div>
+<div style="text-align:center"><img src="_media/cluster_pre.png" />&nbsp;&nbsp;<img src="_media/cluster_post.png" /></div>
 
 * **Recenter Map** Repositions the map view so that every site in the project is on the screen. This is useful to quickly regain a holistic view of the project.
 
@@ -184,7 +184,7 @@ When a site is selected it's details are shown in the lower panel in the Site me
 
 # Coverage
 
-<div style="text-align:center"><img src="/_media/coverage_menu.png" /></div>
+<div style="text-align:center"><img src="_media/coverage_menu.png" /></div>
 
 ## General
 
@@ -193,7 +193,7 @@ When a site is selected it's details are shown in the lower panel in the Site me
 * **Export** Export project coverage to a file. See [above](#export-coverage) for more details.
 * **Coverage to display** Control which coverage to display on the map. This applies to individual coverage as well as combined coverage. If "Tagged Coverage" is selected then a box will become active in which tags can be selected, as well the the logic of combining the tags. If 'or' is selected then a coverage has to have at least one of the required tags present, with 'and' the coverage has to have all of the required tags.
 
-<div style="text-align:center"><img src="/_media/tagged_coverage.png" /></div>
+<div style="text-align:center"><img src="_media/tagged_coverage.png" /></div>
 
 ## Combined Coverage
 
@@ -229,7 +229,7 @@ When a site is selected it's details are shown in the lower panel in the Site me
 * **Show indoor coverage** Apply the indoor_loss parameter value to the radio link. This has the effect of displaying the signal strength that would be recieved whilst indoors.
 * **More Configuration** Opens a dialog where more detailed radio configuration parameters can be supplied. See [Radio System](/parameters?id=radio-system) for more information about the parameters. 
 
-<div style="text-align:center"><img src="/_media/radio_sys_params.png" /></div>
+<div style="text-align:center"><img src="_media/radio_sys_params.png" /></div>
 
 ### Display Options
 
