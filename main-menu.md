@@ -3,7 +3,7 @@
 
 The Main Menus appear in the strip along the top of the Twinkler screen.
 
-<div style="text-align:center"><img src="/_media/main_menus.png" /></div>
+<div style="text-align:center"><img src="_media/main_menus.png" /></div>
 
 # Map Menu Toggle
 
@@ -46,23 +46,23 @@ Don't forget to change the coverage name from the default ("New Signal Strength"
 
 Your favourite locations are stored in the Places menu and are available across every project. The center of the map and the zoom level is saved as the place. A name is suggested for the place however that can be overriden. 
 
-<div style="text-align:center"><img src="/_media/save_place.png" /></div>
+<div style="text-align:center"><img src="_media/save_place.png" /></div>
 
 Places are deleted by selecting a place in the Delete Place option.
 
-<div style="text-align:center"><img src="/_media/delete_place.png" /></div>
+<div style="text-align:center"><img src="_media/delete_place.png" /></div>
 
 ## Lat/Long Position
 
 When this option is selected the longitude and latitude of the cursor is displayed in the bottom, left side of the screen.
 
-<div style="text-align:center"><img src="/_media/latlong.png" /></div>
+<div style="text-align:center"><img src="_media/latlong.png" /></div>
 
 ## Location Finder
 
 The Location Finder tool provides a map of the likely location of a receiver given the signal strength of one or more transmitters.
 
-<div style="text-align:center"><img src="/_media/locfind_select.png" />&nbsp;<img src="/_media/locfind_result.png" /></div>
+<div style="text-align:center"><img src="_media/locfind_select.png" />&nbsp;<img src="_media/locfind_result.png" /></div>
 
 # Search
 
@@ -71,7 +71,7 @@ The search dialog has two options:
 * **Address** searches for an address, centers the map on the address and places a marker on it. The markers will disappear after a few seconds unless "Leave marker on map" is selected.
 * **Project** searches for text in every field in the project. This includes the name, address and notes of sites and coverage.  
 
-<div style="text-align:center"><img src="/_media/search.png" /></div>
+<div style="text-align:center"><img src="_media/search.png" /></div>
 
 # **Account** Menu
 
@@ -106,7 +106,7 @@ Each panel provides a summary of the job. If the job is still running there is a
 
 If a job produces an output file, such as a coverage export, there is a Download button. It is important to download the file before five more background jobs are run, as each panel is overwritten on every fifth job and there is no more opportunity to download a file associated with the previous job.  
 
-<div style="text-align:center"><img src="/_media/job2.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/_media/job5.png" /></div>
+<div style="text-align:center"><img src="_media/job2.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="_media/job5.png" /></div>
 
 ### Organisation Management
 
@@ -134,12 +134,12 @@ In this panel members of the organisation are added to and removed from groups. 
 
 The feedback form is a quick way for to provide feedback immediately to the Twinkler team. Your feedback will always be read and we __really__ appreciate your thoughts, good or bad.
 
-<div style="text-align:center"><img src="/_media/feedback.png" /></div>
+<div style="text-align:center"><img src="_media/feedback.png" /></div>
 
 ## Shortcuts
 
 This option brings up a list of the keyboard shortcuts.
 
-<div style="text-align:center"><img src="/_media/shortcuts.png" /></div>
+<div style="text-align:center"><img src="_media/shortcuts.png" /></div>
 
 
