@@ -34,7 +34,7 @@ Just want to try it out real quick, huh?
 
 Lets look at the main screen to see where the major functions are located.
 
-<div style="text-align:center"><img src="/_media/overview.png" /></div>
+<div style="text-align:center"><img src="_media/overview.png" /></div>
 
 The **menu bar** is the strip at the top of the screen. The main functions of Twinkler are called from the menu bar.
 
@@ -52,7 +52,7 @@ The are many keyboard shortcuts available that can be used instead the mouse. Pr
 
 Also, helpful information about buttons and text-fields will pop up when the pointer is held over them.
 
-<div style="text-align:center"><img src="/_media/hover_example.png" /></div>
+<div style="text-align:center"><img src="_media/hover_example.png" /></div>
 
 # Help
 
