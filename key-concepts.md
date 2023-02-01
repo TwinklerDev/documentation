@@ -18,7 +18,7 @@ See [Project](/map-menu?id=sites) for more details.
 
 The map is the main part of the screen that displays sites, coverage and layers. 
 
-<div style="text-align:center"><img src="/_media/map_types.png" /></div>
+<div style="text-align:center"><img src="_media/map_types.png" /></div>
 
 The map is based on Google Maps and supports two map types - **street maps** (with terrain) and **satellite view** (with labels). The terrain map is great for understanding how coverage has been affected by land elevation. The satellite view gives an appreciation of land use and population dispersion.
 
