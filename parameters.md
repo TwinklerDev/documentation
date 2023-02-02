@@ -137,7 +137,7 @@ The UID of the site that this coverage is associated with. Every coverage must b
 </td></tr>
 
 <tr><td>name</th><td>
-The name of the coverage, which can be displayed on the map. It does not have to be unique but often can be helpful when it is unqiue. [STRING]
+The name of the coverage, which can be displayed on the map. It does not have to be unique but often can be helpful when it is unique. [STRING]
 </td></tr>
 
 </table>

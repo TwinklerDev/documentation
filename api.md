@@ -71,11 +71,11 @@ Creates a new project.
 
 **POST parameters**
 
-All parameters are optional.
-
-* "project_name" -- a descriptive name for the project
-* "project_notes" -- text notes for the project
-* "organisation_uid" -- UID of the organisation of the project; can only be used if the access token allows it 
+| Parameter | Mandatory | Type | Description |
+| - | - | - | - |
+|project_name|N|String|a descriptive name for the project|
+|project_notes|N|String|text notes for the project|
+|organisation_uid|N|String|UID of the organisation of the project; can only be used if the access token allows it|
 
 **Response**
 
@@ -102,9 +102,11 @@ Updates an existing project. Existing values are overwritten.
 
 **POST parameters**
 
-* "project_uid" -- UID of the project
-* "project_name" -- (optional) a descriptive name for the project
-* "project_notes" -- (optional) text notes for the project
+| Parameter | Mandatory | Type | Description |
+| - | - | - | - |
+|project_uid|Y|String|UID of the project|
+|project_name|N|String|a descriptive name for the project|
+|project_notes|N|String|text notes for the project|
 
 **Response**
 
@@ -130,7 +132,9 @@ Delete an existing project. All data, including sites and coverage of the projec
 
 **POST parameters**
 
-* "project_uid" -- UID of the project to delete
+| Parameter | Mandatory | Type | Description |
+| - | - | - | - |
+|project_uid|Y|String|UID of the project to delete|
 
 **Response**
 
@@ -159,7 +163,9 @@ Returns details for all sites in a project.
 
 **POST parameters**
 
-* "project_uid" -- UID of the project
+| Parameter | Mandatory | Type | Description |
+| - | - | - | - |
+|project_uid|Y|String|UID of the project|
 
 **Response**
 
@@ -198,13 +204,25 @@ Creates a new site in a project.
 
 **POST parameters**
 
-* "project_uid" -- UID of the project to which the site will be added
-* "lng" -- longitude of site (WGS84)
-* "lat" -- latitude of site (WGS84)
-* "site_name" -- (optional) a descriptive name for the site
-* "site_notes" -- (optional) text notes for the site
-* "site_externalid" -- (optional) a name or reference for the site used by external systems
-* "site_tags" -- (optional) list of tags associated with the site
+| Parameter | Mandatory | Type | Description |
+| - | - | - | - |
+|project_uid|Y|String|UID of the project that has the site to be updated|
+|lng|Y|Number|longitude of site (WGS84)|
+|lat|Y|Number|latitude of site (WGS84)|
+|site_name|N|String|a descriptive name for the site|
+|site_notes|N|String|text notes for the site|
+|site_externalid|N|String|a name or reference for the site used by external systems|
+|site_tags|N|Array of strings|list of tags associated with the site|
+|address|N|String|text address of the site|
+
+The following POST parameters that manipulate the site on the web interface may also be supplied.
+
+| Parameter | Mandatory | Type | Description |
+| - | - | - | - |
+|change_locked|N|Boolean|whehther changes are permitted in the web interface|
+|clusterable|N|Boolean|whether the site will form clusters in the web interface|
+|color|N|String|color of the site in the web interface|
+|image|N|String|representative image in the web interface|
 
 **Response**
 
@@ -234,19 +252,21 @@ Updates a site in a project. Existing values are overwritten and coverage are re
 
 **POST parameters**
 
-* "project_uid" -- UID of the project that has the site to be updated
-* "site_uid" -- UID of the the site to be updated
-* "lng" -- (optional) longitude of site (WGS84)
-* "lat" -- (optional) latitude of site (WGS84)
-* "site_name" -- (optional) a descriptive name for the site
-* "site_notes" -- (optional) text notes for the site
-* "site_externalid" -- (optional) a name or reference for the site used by external systems
-* "site_tags" -- (optional) list of tags associated with the site
-* "address" -- (optional) text address of the site
-* "change_locked" -- (optional boolean) whehther changes are permitted in the web interface
-* "clusterable" -- (optional boolean) whether the site will form clusters in the web interface
-* "color" -- (optional) color of the site in the web interface
-* "image" -- (optional) representative image in the web interface
+| Parameter | Mandatory | Type | Description |
+| - | - | - | - |
+|project_uid|Y|String|UID of the project that has the site to be updated|
+|site_uid|Y|String|UID of the site to be updated|
+|lng|N|Number|longitude of site (WGS84)|
+|lat|N|Number|latitude of site (WGS84)|
+|site_name|N|String|a descriptive name for the site|
+|site_notes|N|String|text notes for the site|
+|site_externalid|N|String|a name or reference for the site used by external systems|
+|site_tags|N|Array of strings|list of tags associated with the site|
+|address|N|String|text address of the site|
+|change_locked|N|Boolean|whehther changes are permitted in the web interface|
+|clusterable|N|Boolean|whether the site will form clusters in the web interface|
+|color|N|String|color of the site in the web interface|
+|image|N|String|representative image in the web interface|
 
 **Response**
 
@@ -304,14 +324,16 @@ Returns details for all coverage predictions in a site.
 
 **POST parameters**
 
-* "project_uid" -- UID of the project
-* "site_uid" -- UID of the site
+| Parameter | Mandatory | Type | Description |
+| - | - | - | - |
+|project_uid|Y|String|UID of the project|
+|site_uid|Y|String|UID of the site|
 
 **Response**
 
 The response is a JSON object with a "result" object.
 
-If the result is "success" then a "data" object is returned that contains an array of coverage objects. Each coverage object has the parameters listed below, which are described [here](https://twinkler-docs.s3.amazonaws.com/index.html#/parameters?id=coverage-parameters):
+If the result is "success" then a "data" object is returned that contains an array of coverage objects. Each coverage object has the parameters listed below, which are described [here](documentation/index.html#/parameters?id=coverage-parameters):
 
 General Parameters
 * site_uid
@@ -386,20 +408,33 @@ curl --request POST 'https://twinkler.io/api/v1/getcoverages' \
 
 Command: **addcoverage**
 
-Creates a new coverage prediction in a site. The values of the coverage prediction parameters are determined in the following order:
+Creates a new coverage prediction in a site. The values of the coverage prediction parameters are selected in the 
+following order:
 
-1. Default parameter values (every parameter has a default value)
-2. Values of the reference coverage, if `reference_coverage_uid` is supplied
-3. Meta-Parameters (`radio_tech`, `scenario`, `band`), if they are supplied 
-4. Any individual parameter, if supplied
+1. Default prediction parameter values (every parameter has a default value).
+2. Values of the reference coverage, if `reference_coverage_uid` is supplied.
+3. Meta-Parameters (`radio_tech`, `scenario`, `band`), if they are supplied.
+4. Individual parameter values, if they are supplied.
 
-The parameter ordering gives a lot of flexbility. As a mimimum 
+The parameter ordering gives a lot of flexbility. `project_uid` and `site_uid` must be supplied but all 
+other prediction values are optional.
+
+It can be good practice to at least supply a unique `name` to each coverage.
+
+If the same radio configuration is being used repeatedly, a good approach is to 
+create an initial coverage instance, note it's UID then supply the UID as `reference_coverage_uid` on every `addcoverage`
+call after that.
+
 
 **POST parameters**
 
-* "project_uid" -- UID of the project
-* "site_uid" -- UID of the site
-* XXX
+| Parameter | Mandatory | Type | Description |
+| - | - | - | - |
+|project_uid|Y|String|UID of the project|
+|site_uid|Y|String|UID of the site|
+|reference_coverage_uid|N|String|UID of another coverage from which to copy all |
+|All other|N|Various|See [here](https://twinklerdev.github.io/documentation/index.html#/parameters?id=coverage-parameters) for all other possible coverage parameters|
+
 
 **Response**
 
