@@ -1,12 +1,12 @@
-* [Getting Started](getting-started.md)
+* [Getting Started](getting-started?id=quick-start)
 
-* [Key Concepts](key-concepts.md)
+* [Key Concepts](key-concepts?index=key-concepts)
 
 * [Main Menu](main-menu.md)
 
 * [Map Menu](map-menu.md)
 
-* [Antennas](antennas.md)
+* [Antennas](antennas?index=antennas)
 
 * [Common Actions](common-actions.md)
 

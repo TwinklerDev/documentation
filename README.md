@@ -1,6 +1,6 @@
 # Twinkler Documentation
 
-Welcome to Twinkler, the online radio-network planning tool.
+Welcome to Twinkler, the online radio coverage design tool.
 
 Go to [Quick Start](/getting-started.md?id=quick-start) to jump straight in and create your first coverage prediction in under a minute.
 

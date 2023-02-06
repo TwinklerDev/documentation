@@ -1,7 +1,7 @@
 # 
 # Key Concepts
 
-To use Twinkler effectively it is best to understand the following key concepts.
+The following key concepts are part of Twinkler.
 
 # Project
 

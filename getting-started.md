@@ -58,10 +58,10 @@ Also, helpful information about buttons and text-fields will pop up when the poi
 
 For more information about Twinkler, such as training videos and blog posts, go to the [Twinkler Application](https://www.twinkler.app/) page.
 
-Our Privacy Policy is [here](/privacy-policy.md) and instructions for Facebook data deletion are [here](/facebook-data-deletion.md).
+Our Privacy Policy is [here](/privacy-policy?id=Twinkler-Privacy-Policy) and instructions for Facebook data deletion are [here](/facebook-data-deletion).
 
 # API
 
-An Application Programming Interface (API) makes Twinkler functionality available for integration into external systems. The API is documented [here](api.md)
+An Application Programming Interface (API) makes Twinkler functionality available for integration into external systems. The API is documented [here](api?id=API-V1)
 
 There is also an API specifically for the Location Finder function, that is documented [here](https://twinkler.io/TwinklerAPITestClient.html) for usage details. Please get in [Get in Touch](https://www.twinkler.app/) with us if you would like to start using this API or would like other functionality to be made available.

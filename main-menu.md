@@ -131,7 +131,7 @@ In this panel members of the organisation are added to and removed from groups. 
 
 ## Feedback
 
-The feedback form in the account menu (top right) is a quick way for to provide immediate feedback to the Twinkler team. Your feedback will always be read and we __really__ appreciate your views, positive or negative.
+The feedback form in the account menu (top right) quickly provides immediate feedback to the Twinkler team. Your feedback will always be read and we __really__ appreciate your views, positive or negative.
 
 <div style="text-align:center"><img src="_media/feedback.png" /></div>
 
