@@ -24,12 +24,12 @@ JSON with the parameters of the POST.
 ```
 curl --request POST 'https://twinkler.io/api/v1/echo' \
      --header 'Content-Type: application/json' \
-     --data '{"access_token":"a6905525-3dc9-4e6a-abc5-b23faf5cea77", \
+     --data '{"access_token":"a6905525-3dc9-4e6a-abc5-b23faf5cea77",
               "dummyval":42}'
 ```
 
 
-# Project
+# Project Commands
 
 ## Get Projects
 
@@ -88,9 +88,9 @@ If the result is "success" then the UID of the newly created project is returned
 ```
 curl --request POST 'https://twinkler.io/api/v1/addproject' \
      --header 'Content-Type: application/json' \
-     --data '{"access_token":"a6905525-3dc9-4e6a-abc5-b23faf5cea77", \
-              "project_name":"My Project 1", \
-              "project_notes": "Testing a new Twinkler project" \
+     --data '{"access_token":"a6905525-3dc9-4e6a-abc5-b23faf5cea77",
+              "project_name":"My Project 1",
+              "project_notes": "Testing a new Twinkler project"
              }'
 ```
 
@@ -117,10 +117,10 @@ The response is a JSON object with a "result" object - 'success' or 'fail'.
 ```
 curl --request POST 'https://twinkler.io/api/v1/updateproject' \
      --header 'Content-Type: application/json' \
-     --data '{"access_token":"a6905525-3dc9-4e6a-abc5-b23faf5cea77", \
-              "project_uid":"550757de-952d-4f76-996e-ba90cb80b0c8", \
-              "project_name":"Updated Project Name", \
-              "project_notes": "Testing an updated note" \
+     --data '{"access_token":"a6905525-3dc9-4e6a-abc5-b23faf5cea77",
+              "project_uid":"550757de-952d-4f76-996e-ba90cb80b0c8",
+              "project_name":"Updated Project Name",
+              "project_notes": "Testing an updated note"
              }'
 ```
 
@@ -145,13 +145,13 @@ The response is a JSON object with a "result" object - 'success' or 'fail'.
 ```
 curl --request POST 'https://twinkler.io/api/v1/deleteproject' \
      --header 'Content-Type: application/json' \
-     --data '{"access_token":"a6905525-3dc9-4e6a-abc5-b23faf5cea77", \
-              "project_uid":"550757de-952d-4f76-996e-ba90cb80b0c8", \
+     --data '{"access_token":"a6905525-3dc9-4e6a-abc5-b23faf5cea77",
+              "project_uid":"550757de-952d-4f76-996e-ba90cb80b0c8"
              }'
 ```
 
 
-# Site
+# Site Commands
 
 See [Site Parameters](/parameters?id=site-parameters) for more information.
 
@@ -191,8 +191,8 @@ If the result is "success" then a "data" object is returned that contains an arr
 ```
 curl --request POST 'https://twinkler.io/api/v1/getsites' \
      --header 'Content-Type: application/json' \
-     --data '{"access_token":"a6905525-3dc9-4e6a-abc5-b23faf5cea77" \
-              "project_uid":"bd0daf4b-e820-45d6-8d8b-6e91748f5a14", \
+     --data '{"access_token":"a6905525-3dc9-4e6a-abc5-b23faf5cea77",
+              "project_uid":"bd0daf4b-e820-45d6-8d8b-6e91748f5a14"
              }'
 ```
 
@@ -235,12 +235,12 @@ If the result is "success" then the UID of the newly created site is returned as
 ```
 curl --request POST 'https://twinkler.io/api/v1/addsite' \
      --header 'Content-Type: application/json' \
-     --data '{"access_token":"a6905525-3dc9-4e6a-abc5-b23faf5cea77", \
-              "project_uid":"550757de-952d-4f76-996e-ba90cb80b0c8", \
-              "longitude": 131.06227, \
-              "latitude":, -25.35368, \
-              "site_name":"My Site 1", \
-              "site_notes": "Testing a new Twinkler site" \
+     --data '{"access_token":"a6905525-3dc9-4e6a-abc5-b23faf5cea77",
+              "project_uid":"550757de-952d-4f76-996e-ba90cb80b0c8",
+              "longitude": 131.06227,
+              "latitude": -25.35368,
+              "site_name":"My Site 1",
+              "site_notes": "Testing a new Twinkler site"
              }'
 ```
 
@@ -277,13 +277,13 @@ The response is a JSON object with a "result" object - 'success' or 'fail'.
 ```
 curl --request POST 'https://twinkler.io/api/v1/updatesite' \
      --header 'Content-Type: application/json' \
-     --data '{"access_token":"a6905525-3dc9-4e6a-abc5-b23faf5cea77", \
-              "project_uid":"550757de-952d-4f76-996e-ba90cb80b0c8", \
-              "site_uid":"bd0daf4b-e820-45d6-8d8b-6e91748f5a14", \
-              "longitude": 131.06227, \
-              "latitude":, -25.35368, \
-              "site_name":"My Site 1", \
-              "site_notes": "Testing a new Twinkler site" \
+     --data '{"access_token":"a6905525-3dc9-4e6a-abc5-b23faf5cea77",
+              "project_uid":"550757de-952d-4f76-996e-ba90cb80b0c8",
+              "site_uid":"bd0daf4b-e820-45d6-8d8b-6e91748f5a14",
+              "longitude": 131.06227,
+              "latitude": -25.35368,
+              "site_name":"My Site 1",
+              "site_notes": "Testing a new Twinkler site"
              }'
 ```
 
@@ -307,33 +307,33 @@ The response is a JSON object with a "result" object - 'success' or 'fail'.
 ```
 curl --request POST 'https://twinkler.io/api/v1/deletesite' \
      --header 'Content-Type: application/json' \
-     --data '{"access_token":"a6905525-3dc9-4e6a-abc5-b23faf5cea77", \
-              "project_uid":"550757de-952d-4f76-996e-ba90cb80b0c8", \
-              "site_uid":"bd0daf4b-e820-45d6-8d8b-6e91748f5a14" \
+     --data '{"access_token":"a6905525-3dc9-4e6a-abc5-b23faf5cea77",
+              "project_uid":"550757de-952d-4f76-996e-ba90cb80b0c8",
+              "site_uid":"bd0daf4b-e820-45d6-8d8b-6e91748f5a14"
              }'
 ```
 
 
-# Coverage
+# Coverage Commands
 
 ## Get Coverages
 
 Command: **getcoverages**
 
-Returns details for all coverage predictions in a site.
+Returns the details in JSON for all coverage predictions of a site or sites.
 
 **POST parameters**
 
 | Parameter | Mandatory | Type | Description |
 | - | - | - | - |
 |project_uid|Y|String|UID of the project|
-|site_uid|Y|String|UID of the site|
+|site_uids|Y|String or Array of Strings|UID of the site or sites|
 
 **Response**
 
 The response is a JSON object with a "result" object.
 
-If the result is "success" then a "data" object is returned that contains an array of coverage objects. Each coverage object has the parameters listed below, which are described [here](documentation/index.html#/parameters?id=coverage-parameters):
+If the result is "success" then a "data" object is returned that contains an array of coverage objects. Each coverage object has the parameters listed below, which are described **[here](parameters?id=coverage-parameters)**:
 
 General Parameters
 * site_uid
@@ -398,9 +398,9 @@ Prediction Parameters
 ```
 curl --request POST 'https://twinkler.io/api/v1/getcoverages' \
      --header 'Content-Type: application/json' \
-     --data '{"access_token":"a6905525-3dc9-4e6a-abc5-b23faf5cea77" \
-              "project_uid":"550757de-952d-4f76-996e-ba90cb80b0c8", \
-              "site_uid":"bd0daf4b-e820-45d6-8d8b-6e91748f5a14" \
+     --data '{"access_token":"a6905525-3dc9-4e6a-abc5-b23faf5cea77",
+              "project_uid":"550757de-952d-4f76-996e-ba90cb80b0c8",
+              "site_uid":"bd0daf4b-e820-45d6-8d8b-6e91748f5a14"
              }'
 ```
 
@@ -425,7 +425,6 @@ If the same radio configuration is being used repeatedly, a good approach is to
 create an initial coverage instance, note it's UID then supply the UID as `reference_coverage_uid` on every `addcoverage`
 call after that.
 
-
 **POST parameters**
 
 | Parameter | Mandatory | Type | Description |
@@ -433,34 +432,77 @@ call after that.
 |project_uid|Y|String|UID of the project|
 |site_uid|Y|String|UID of the site|
 |reference_coverage_uid|N|String|UID of another coverage from which to copy all |
-|All other|N|Various|See [here](https://twinklerdev.github.io/documentation/index.html#/parameters?id=coverage-parameters) for all other possible coverage parameters|
+|All other|N|Various|See **[here](parameters?id=coverage-parameters)** for all other possible coverage parameters|
 
 
 **Response**
 
-XXX
+The response is a JSON object with a “result” object - ‘success’ or ‘fail’.
+
+If it's a failure then a "message" object will give the reason.
+
+If it's successful then a "coverage_uid" object will give the UID of the newly created coverage.
 
 **Example**
 
-XXX
-
-Prediction Parameter Precedence
-1. Supplied parameter (one)
-2. Supplied Radio System Meta-Parameter (some) - Technology / Scenario / Band
-3. Reference coverage (UID) (all)
-4. Default parameter (all)
+```
+curl --request POST 'https://twinkler.io/api/v1/addcoverage' \
+     --header 'Content-Type: application/json' \
+     --data '{"access_token": "a6905525-3dc9-4e6a-abc5-b23faf5cea77",
+              "project_uid": "550757de-952d-4f76-996e-ba90cb80b0c8",
+              "site_uid": "bd0daf4b-e820-45d6-8d8b-6e91748f5a14",
+              "reference_coverage_uid": "6e9c4ecd-3d81-4550-9d14-f19104e1114c",
+              "tx_height": 30,
+              "tx_azimuth": 180
+             }'
+```
 
 ## Update Coverage
 
 Command: **updatecoverage**
 
-XXX
+Updates an existing coverage prediction with one or more new values. A new prediction is generated if required by the changed values.
+
+**POST parameters**
+
+| Parameter | Mandatory | Type | Description |
+| - | - | - | - |
+|project_uid|Y|String|UID of the project|
+|coverage_uid|Y|String|UID of the coverage prediction|
+|One or more coverage parameters|N|Various|See **[here](parameters?id=coverage-parameters)** for all possible coverage parameters|
+
+**Response**
+
+The response is a JSON object with a “result” object - ‘success’ or ‘fail’.
+
+If it's a failure then a "message" object will give the reason.
+
+If it's successful then a "coverage_uid" object will give the UID of the updated coverage prediction.
+
+**Example**
+
+```
+curl --request POST 'https://twinkler.io/api/v1/updatecoverage' \
+     --header 'Content-Type: application/json' \
+     --data '{"access_token": "550757de-952d-4f76-996e-ba90cb80b0c8",
+              "project_uid": "c8eb94a2-a834-4298-8019-2b122fae7b73",
+              "site_uid": "0c55770c-12f3-492a-ae23-faf2135ab472",
+              "coverage_uid": "b9cbcfe0-a5b6-4fdc-a0e3-ffc008c2370e",
+              "tx_height": 35,
+              "tx_azimuth": 200
+             }'
+```
+
+## Delete Coverage
+
+Command: **deletecoverage**
+
+Deletes a coverage prediction.
 
 **POST parameters**
 
 * "project_uid" -- UID of the project
 * "coverage_uid" -- UID of the site
-* XXX
 
 **Response**
 
@@ -470,16 +512,19 @@ XXX
 
 XXX
 
-## Delete Coverage
+## Get Coverage Vector
 
-Command: **deletecoverage**
+Command: **getcoveragevector**
+
+GET (not POST)  getcoveragevector - png, tiff, jpeg?
 
 XXX
 
-**POST parameters**
+**GET parameters**
 
 * "project_uid" -- UID of the project
-* "coverage_uid" -- UID of the site
+* file_type []
+* coverage selectors ???
 
 **Response**
 
@@ -500,8 +545,10 @@ XXX
 **GET parameters**
 
 * "project_uid" -- UID of the project
-* "site_uid" -- UID of the site
-* XXX
+* "coverage_uid" -- UID of the coverage
+* file_type
+* color_scheme
+* ???
 
 **Response**
 
