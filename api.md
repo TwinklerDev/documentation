@@ -504,13 +504,27 @@ Deletes a coverage prediction.
 * "project_uid" -- UID of the project
 * "coverage_uid" -- UID of the site
 
+| Parameter | Mandatory | Type | Description |
+| - | - | - | - |
+|project_uid|Y|String|UID of the project|
+|coverage_uid|Y|String|UID of the coverage prediction to delete|
+
 **Response**
 
-XXX
+The response is a JSON object with a “result” object - ‘success’ or ‘fail’.
+
+If it's a failure then a "message" object will give the reason.
 
 **Example**
 
-XXX
+```
+curl --request POST 'https://twinkler.io/api/v1/deletecoverage' \
+     --header 'Content-Type: application/json' \
+     --data '{"access_token": "550757de-952d-4f76-996e-ba90cb80b0c8",
+              "project_uid": "c8eb94a2-a834-4298-8019-2b122fae7b73",
+              "coverage_uid": "b9cbcfe0-a5b6-4fdc-a0e3-ffc008c2370e"
+            }'
+```
 
 ## Get Coverage Vector
 
