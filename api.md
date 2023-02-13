@@ -526,9 +526,64 @@ curl --request POST 'https://twinkler.io/api/v1/deletecoverage' \
             }'
 ```
 
+## Get Coverage PNG
+
+Command: **coveragepng**
+
+Returns a PNG image of a coverage prediction, including a transparency layer. 
+The image URL can be used for example, in a call to `google.maps.GroundOverlay()`, where the required **imageBounds** parameter can be retrieved from a separate call to `coveragebounds`.
+
+Cache-Control: no-cache
+
+**GET Request Format**
+
+/api/v1/coveragepng/<project_uid>/<coverage_uid>/<color_scheme>/<min_val>/<max_val>
+
+| Parameter | Type | Description |
+| - | - | - |
+|project_uid|String|UID of the project|
+|coverage_uid|String|UID of the coverage prediction to return|
+|color_scheme|String|The color scheme to represent coverage strength. See **[here](parameters?id=display)** for allowed values.|
+|min_val|Integer|Minimum signal strength to show (dBm). All lower values are not displayed.|
+|max_val|Integer|Maximum signal strength to show (dBm). All higher values are displayed as max_val.|
+
+**Response**
+
+A PNG image is returned.
+
+**Example**
+
+XXX
+
+## Get Coverage Bounds
+
+Command: **coveragebounds**
+
+Returns the bounds of a coverage prediction. 
+
+Cache-Control: no-cache
+
+**GET Request Format**
+
+/api/v1/coveragepng/<project_uid>/<coverage_uid>/<color_scheme>/<min_val>/<max_val>
+
+| Parameter | Type | Description |
+| - | - | - |
+|project_uid|String|UID of the project|
+|coverage_uid|String|UID of the coverage prediction bounds to return|
+
+**Response**
+
+A JSON object with 'north', 'south', east' and 'west' values (WGS84).
+
+**Example**
+
+XXX
+
 ## Get Coverage Vector
 
 Command: **getcoveragevector**
+
 
 GET (not POST)  getcoveragevector - png, tiff, jpeg?
 
@@ -548,27 +603,4 @@ XXX
 
 XXX
 
-## Get Coverage Image
-
-Command: **getcoverageimage**
-
-GET (not POST)  getcoverageimage - png, tiff, jpeg?
-
-XXX
-
-**GET parameters**
-
-* "project_uid" -- UID of the project
-* "coverage_uid" -- UID of the coverage
-* file_type
-* color_scheme
-* ???
-
-**Response**
-
-XXX
-
-**Example**
-
-XXX
 
