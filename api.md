@@ -1,9 +1,9 @@
 # 
 # API V1
 
-The Twinkler Application Programming Interface provides a means for non-browser applications to access the data and functionality of Twinkler.
+The Twinkler Application Programming Interface provides a means for applications to access the data and functionality of Twinkler.
 
-Requests are sent as HTTP POSTS to `https://twinkler.io/api/v1/<command>`. The POST contents, in addition to the parameters specific to the command, also includes an `access_token` that is retrieved from the user's account in Twinkler. 
+Requests are sent as HTTP POSTS to `https://twinkler.io/api/v1/<command>`. The POST contents, in addition to the command-specific parameters, also include an `access_token` that is retrieved from the user's account in Twinkler. 
 
 # Echo
 
