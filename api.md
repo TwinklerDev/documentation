@@ -484,9 +484,9 @@ If it's successful then a "coverage_uid" object will give the UID of the updated
 ```
 curl --request POST 'https://twinkler.io/api/v1/updatecoverage' \
      --header 'Content-Type: application/json' \
-     --data '{"access_token": "550757de-952d-4f76-996e-ba90cb80b0c8",
-              "project_uid": "c8eb94a2-a834-4298-8019-2b122fae7b73",
-              "site_uid": "0c55770c-12f3-492a-ae23-faf2135ab472",
+     --data '{"access_token": "a6905525-3dc9-4e6a-abc5-b23faf5cea77",
+              "project_uid": "550757de-952d-4f76-996e-ba90cb80b0c8",
+              "site_uid": "bd0daf4b-e820-45d6-8d8b-6e91748f5a14",
               "coverage_uid": "b9cbcfe0-a5b6-4fdc-a0e3-ffc008c2370e",
               "tx_height": 35,
               "tx_azimuth": 200
@@ -520,10 +520,41 @@ If it's a failure then a "message" object will give the reason.
 ```
 curl --request POST 'https://twinkler.io/api/v1/deletecoverage' \
      --header 'Content-Type: application/json' \
-     --data '{"access_token": "550757de-952d-4f76-996e-ba90cb80b0c8",
-              "project_uid": "c8eb94a2-a834-4298-8019-2b122fae7b73",
+     --data '{"access_token": "a6905525-3dc9-4e6a-abc5-b23faf5cea77",
+              "project_uid": "550757de-952d-4f76-996e-ba90cb80b0c8",
               "coverage_uid": "b9cbcfe0-a5b6-4fdc-a0e3-ffc008c2370e"
             }'
+```
+
+## Get Coverage Bounds
+
+Command: **coveragebounds**
+
+Returns the bounds of a coverage prediction. 
+
+Cache-Control: no-cache
+
+**GET Request Format**
+
+/api/v1/coveragebounds/\<project_uid\>/\<coverage_uid\>
+
+| Parameter | Type | Description |
+| - | - | - |
+|project_uid|String|UID of the project|
+|coverage_uid|String|UID of the coverage prediction bounds to return|
+
+**Response**
+
+A JSON object with 'north', 'south', east' and 'west' values (WGS84) of the PNG image returned by `coveragepng`.
+
+**Example**
+
+```
+access_token=a6905525-3dc9-4e6a-abc5-b23faf5cea77
+project_uid=550757de-952d-4f76-996e-ba90cb80b0c8
+coverage_uid=b9cbcfe0-a5b6-4fdc-a0e3-ffc008c2370e
+
+curl --request GET "https://twinkler.io/api/v1/coveragebounds/$access_token/$project_uid/$coverage_uid"
 ```
 
 ## Get Coverage PNG
@@ -531,13 +562,11 @@ curl --request POST 'https://twinkler.io/api/v1/deletecoverage' \
 Command: **coveragepng**
 
 Returns a PNG image of a coverage prediction, including a transparency layer. 
-The image URL can be used for example, in a call to `google.maps.GroundOverlay()`, where the required **imageBounds** parameter can be retrieved from a separate call to `coveragebounds`.
-
-Cache-Control: no-cache
+The image URL can be used for example, in a call to `google.maps.GroundOverlay()`, where the required **imageBounds** parameter can be retrieved from a separate call to `coveragebounds` (above).
 
 **GET Request Format**
 
-/api/v1/coveragepng/<project_uid>/<coverage_uid>/<color_scheme>/<min_val>/<max_val>
+/api/v1/coveragepng/\<project_uid\>/\<coverage_uid\>/\<color_scheme\>/\<min_val\>/\<max_val\>
 
 | Parameter | Type | Description |
 | - | - | - |
@@ -553,54 +582,12 @@ A PNG image is returned.
 
 **Example**
 
-XXX
+```
+access_token=a6905525-3dc9-4e6a-abc5-b23faf5cea77
+project_uid=550757de-952d-4f76-996e-ba90cb80b0c8
+coverage_uid=b9cbcfe0-a5b6-4fdc-a0e3-ffc008c2370e
 
-## Get Coverage Bounds
-
-Command: **coveragebounds**
-
-Returns the bounds of a coverage prediction. 
-
-Cache-Control: no-cache
-
-**GET Request Format**
-
-/api/v1/coveragepng/<project_uid>/<coverage_uid>/<color_scheme>/<min_val>/<max_val>
-
-| Parameter | Type | Description |
-| - | - | - |
-|project_uid|String|UID of the project|
-|coverage_uid|String|UID of the coverage prediction bounds to return|
-
-**Response**
-
-A JSON object with 'north', 'south', east' and 'west' values (WGS84).
-
-**Example**
-
-XXX
-
-## Get Coverage Vector
-
-Command: **getcoveragevector**
-
-
-GET (not POST)  getcoveragevector - png, tiff, jpeg?
-
-XXX
-
-**GET parameters**
-
-* "project_uid" -- UID of the project
-* file_type []
-* coverage selectors ???
-
-**Response**
-
-XXX
-
-**Example**
-
-XXX
-
+curl --request GET "https://cs105:7173/api/v1/coveragepng/$access_token/$project_uid/$coverage_uid/turbo/-115/-60" \
+     --output /tmp/coverage.png
+```
 
