@@ -332,8 +332,12 @@ The propagation model of the air interface:
 All additional losses in the radio channel eg. fading, foliage, interference, margins [dB]
 </td></tr>
 
+<tr><td>building_attenuation</th><td>
+Use the global building database to apply location-specific building attenuation [TRUE, FALSE]
+</td></tr>
+
 <tr><td>indoor_loss</th><td>
-A margin to account for loss resulting from propagation through buildings into indoor areas eg. through brick walls or concrete. 
+A margin to account for loss resulting from propagation through buildings into indoor areas eg. through brick walls or concrete. Applied if *use_indoor_loss* is True. 
 </td></tr>
 
 <tr><td>rx_height</th><td>
