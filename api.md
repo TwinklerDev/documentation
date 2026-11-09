@@ -382,6 +382,10 @@ Prediction Parameters
 * itm_pol
 * itm_radio_climate
 * itm_sgm_conductivity
+* p1812_pctTime
+* p1812_pctLoc
+* p1812_pol
+* p1812_sigmaL
 * spm_K1
 * spm_K2
 * spm_K3

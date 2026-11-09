@@ -325,6 +325,7 @@ The propagation model of the air interface:
 | freespace | Freespace  |
 | std_prop_mdl | Standard Propagation Model |
 | itm | Irregular Terrain Model |
+| p1812 | [ITU-R P.1812](#p1812) |
 
 </td></tr>
 
@@ -518,6 +519,34 @@ Mode of variability. Select whether pctConf, pctTime and pctLoc are to be used.
 <p style="margin: 0px 0px 0px 25px;">1 - Individual: pctTime is "Situation/Location", pctConf is "Confidence", pctLoc not used</p>
 <p style="margin: 0px 0px 0px 25px;">2 - Mobile: pctTime is "Time/Locations (Reliability)", pctConf is "Confidence", pctLoc not used</p>
 <p style="margin: 0px 0px 0px 25px;">3 - Broadcast: pctTime is "Time", pctLoc is "Location", pctConf is "Confidence"</p>
+</td></tr>
+
+</table>
+
+<a id='p1812'></a>
+## ITU-R P.1812
+
+[Recommendation ITU-R P.1812-8](https://www.itu.int/rec/R-REC-P.1812/en), a path-specific propagation prediction method for point-to-area terrestrial services from 30 MHz to 6 GHz. Each pixel's loss is calculated along the terrain profile from the transmitter, with representative clutter heights from the morphology (suburban 10 m, urban 15 m, dense urban 20 m; none inside building footprints) and the sea from the morphology. Within 0.25 km of the transmitter (below the Recommendation's range) the loss is free space plus terminal clutter loss (ITU-R P.2108-1), blended into P.1812 between 0.25 and 0.5 km. The radio-refractivity parameters are taken from the ITU-R maps at the transmitter.
+
+<table>
+<tr><th>Parameter</th><th>Description</th></tr>
+
+<tr><td>p1812_pctTime</th><td>
+Percentage of time [1 to 50] for which the predicted loss is not exceeded ie. the signal level is exceeded. Default 50.
+</td></tr>
+
+<tr><td>p1812_pctLoc</th><td>
+Percentage of locations [1 to 99] for which the predicted loss is not exceeded. Default 95.
+</td></tr>
+
+<tr><td>p1812_pol</th><td>
+Antenna polarization. Default 1.
+<p style="margin: 0px 0px 0px 25px;">0-Horizontal</p>
+<p style="margin: 0px 0px 0px 25px;">1-Vertical</p>
+</td></tr>
+
+<tr><td>p1812_sigmaL</th><td>
+Location variability standard deviation [dB]. 0 (the default) calculates it from the frequency and pixel size (P.1812 equation (64)); 5.5 is the value used for digital terrestrial television planning.
 </td></tr>
 
 </table>
