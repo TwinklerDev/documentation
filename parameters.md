@@ -526,7 +526,7 @@ Mode of variability. Select whether pctConf, pctTime and pctLoc are to be used.
 <a id='p1812'></a>
 ## ITU-R P.1812
 
-[Recommendation ITU-R P.1812-8](https://www.itu.int/rec/R-REC-P.1812/en), a path-specific propagation prediction method for point-to-area terrestrial services from 30 MHz to 6 GHz. Each pixel's loss is calculated along the terrain profile from the transmitter, with representative clutter heights from the morphology (suburban 10 m, urban 15 m, dense urban 20 m; none inside building footprints) and the sea from the morphology. Within 0.25 km of the transmitter (below the Recommendation's range) the loss is free space plus terminal clutter loss (ITU-R P.2108-1), blended into P.1812 between 0.25 and 0.5 km. The radio-refractivity parameters are taken from the ITU-R maps at the transmitter.
+[Recommendation ITU-R P.1812-8](https://www.itu.int/rec/R-REC-P.1812/en), a path-specific propagation prediction method for point-to-area terrestrial services from 30 MHz to 6 GHz. Each pixel's loss is calculated along the terrain profile from the transmitter, with representative clutter heights from the morphology (suburban 10 m, urban 15 m, dense urban 20 m; where land-cover data is available, trees, forest and plantations 10 m and settlements 10 m; none inside building footprints) and the sea from the morphology. Within 0.25 km of the transmitter (below the Recommendation's range) the loss is free space plus terminal clutter loss (ITU-R P.2108-1), blended into P.1812 between 0.25 and 0.5 km. The radio-refractivity parameters are taken from the ITU-R maps at the transmitter.
 
 <table>
 <tr><th>Parameter</th><th>Description</th></tr>
