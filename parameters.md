@@ -172,6 +172,7 @@ Do not show coverage where it is over any water bodies (oceans, seas, lakes etc)
 <tr><td>pixel_size</th><td>
 The approximate height of each pixel in the coverage prediction ie. the resolution. Values are:
 
+* 480m
 * 240m
 * 120m
 * 60m
